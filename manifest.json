@@ -1,0 +1,30 @@
+{
+    "name": "A-SOUL Dynamic Reminder",
+    "version": "0.2.0",
+    "manifest_version": 3,
+    "description": "在浏览器中实时提醒A-SOUL成员的Bilibili动态更新以及直播信息。",
+    "icons":{
+        "16":"icons/Diana16x16.png",
+        "32":"icons/Diana32x32.png",
+        "48":"icons/Diana48x48.png",
+        "128":"icons/Diana128x128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "关注嘉然,顿顿解馋!"
+    },
+    "background":{
+        "service_worker":"background.js",
+        "type":"module"
+    },
+    "content_scripts":[
+        {
+            "matches":["https://live.bilibili.com/*","http://live.bilibili.com/*"],
+            "js":["./js/jquery-3.6.0.min.js","./js/bili-live.js"],
+            "runat":"document_start"
+        }
+    ],
+    "permissions":["storage","notifications","alarms"],
+    "host_permissions":["http://*.bilibili.com/","https://*.bilibili.com/"],
+    "homepage_url":"https://github.com/Z-Bokle/A-SOUL-Dynamic-Reminder"
+}
