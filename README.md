@@ -1,5 +1,5 @@
 # A-SOUL-Dynamic-Reminder
-readme开摆了，能看明白就行_(:з」∠)_  
+正在重构并施工中，请暂时不要clone本仓库。
 
 ## 写在前面  
 由于Google将于2023年停止对Manifest V2的支持，因此ADR需要重构代码并迁移至V3，该仓库存放Manifest V3版本的ADR源代码，V2版本请访问 https://github.com/Z-Bokle/A-SOUL-Dynamic-Reminder-V2
